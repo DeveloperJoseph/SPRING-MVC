@@ -8,7 +8,10 @@
         <title>Welcome to Spring Web MVC project</title>
     </head>
 
-    <body>
+    <body class="text-white bg-dark">
+        <div class="jumbotron text-center bg-success">
+            <h1>HELLO WORLD SPRING MVC</h1>
+        </div>
         <p>Hello! This is the default welcome page for a Spring Web MVC project.</p>
         <p><i>To display a different welcome page for this project, modify</i>
             <tt>index.jsp</tt> <i>, or create your own welcome page then change
