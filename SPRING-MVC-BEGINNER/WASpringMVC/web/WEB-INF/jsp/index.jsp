@@ -10,7 +10,7 @@
 
     <body class="text-white bg-dark">
         <div class="jumbotron text-center bg-success">
-            <h1>HELLO WORLD SPRING MVC</h1>
+            <h1>HELLO WORLD SPRING MVC - INDEX</h1>
         </div>
         <p>Hello! This is the default welcome page for a Spring Web MVC project.</p>
         <p><i>To display a different welcome page for this project, modify</i>
