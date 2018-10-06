@@ -16,10 +16,10 @@ public class BDConexion {
     }
 
     //atributos para establecer conexion
-    private String url = "jdbc:sqlserver://WHOAMI\\WHOAMI:1433;databaseName=bdnotas";
+    private String url = "jdbc:sqlserver://localhost:1433;databaseName=bdnotas";
     private String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
     private String user = "sa";
-    private String password = "alumno";
+    private String password = "whoami";
 
     Connection cnn = null;// onexion con un valor nulo
 

@@ -12,8 +12,8 @@
         </head>
     <%--CABECERA DE NUESTRO CUERPO HTML--%>
     <body class="text-white bg-dark">
-        <c:forEach var="objCurso" items="${listadoCursos}">
-            <p>${objAlumno.getNomCurso()}</p>
+        <c:forEach var="objCurso" items="${ListadoCursos}">
+            <p>${objCurso.getNomCurso()}</p>
         </c:forEach>
     </body>
 </html>
