@@ -9,39 +9,47 @@
         <%--INCLUIMOS NUESTROS ENLACES BOOTSTRAP 4--%>
         <jsp:include page="link.jsp"></jsp:include>
             <title>Welcome to Spring Web MVC project</title>
-        </head>
+        <%--NUESTRO SCRIPT jQuery QYE NOS PERMITE FILTRAR EN NUESRTO TBODY--%>
+        <script>
+            $(document).ready(function () {
+                $("#myInput").on("keyup", function () {
+                    var valorInput = $(this).val().toLowerCase();
+                    $("#myTableBody tr").filter(function () {
+                        $(this).toggle($(this).text().toLowerCase().indexOf(valorInput) > -1);
+                    });
+                });
+            });
+        </script>
+    </head>
     <%--CABECERA DE NUESTRO CUERPO HTML--%>
-    <body class="text-white bg-dark">
-        <c:forEach var="objCurso" items="${ListadoCursos}">
-            <p>${objCurso.getNomCurso()}</p>
-        </c:forEach>
+    <body class="bg-dark">
+        <div class="jumbotron text-dark  text-center bg-ligth">
+            <h1>LISTA DE CURSOS</h1>
+        </div>
+        <div class="container">
+            <center>
+                <input id="myInput" type="text" class="form-control text-center w-50"
+                       placeholder="Buscar por código, nombre de curso o credito ...">
+            </center>
+            <br>
+            <table class="table table-dark table-striped">
+                <thead>
+                    <tr>
+                        <th>Codigo</th>
+                        <th>Nombre de Curso</th>
+                        <th>Credito</th>
+                    </tr>
+                </thead>
+                <tbody id="myTableBody">
+                    <c:forEach var="objCurso" items="${ListadoCursos}">
+                        <tr>
+                            <td>${objCurso.getIdCurso()}</td>
+                            <td>${objCurso.getNomCurso()}</td>
+                            <td>${objCurso.getCredito()}</td>
+                        </tr>
+                    </c:forEach>         
+                </tbody>
+            </table>
+        </div>
     </body>
 </html>
-<!--
-<div class="jumbotron text-center bg-success">
-    <h1>HELLO WORLD SPRING MVC - INDEX</h1>
-</div>
-<%--DIV CONTAINER--%>
-<div class="container">
-<%--DIV ROW PARA NUESTRA RESPECTIVAS COLUMNAS--%>
-<div class="row">
-<%-- 1 DIV col-sm-4 es nuestra primera columna en nuestro pagina jsp--%>
-<div class="col-sm-4">
-    <h3>Columna 1</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>  
-</div>
-<%-- 2 DIV col-sm-4 es nuestra primera columna en nuestro pagina jsp--%>
-<div class="col-sm-4">
-    <h3>Columna 2</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>  
-</div>
-<%-- 3 DIV col-sm-4 es nuestra primera columna en nuestro pagina jsp--%>
-<div class="col-sm-4">
-    <h3>Columna 3</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>  
-</div>
-</div>
-</div>-->

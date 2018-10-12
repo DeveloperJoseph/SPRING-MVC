@@ -17,6 +17,7 @@ import jw.developer.it.model.Curso;
 public class CursoDAO implements ICursoDAO {
 
     @Override
+    @SuppressWarnings("CallToPrintStackTrace")
     public List<Curso> listaCursos() {
         //INSTANCIAMOS NUESTRO OBJETOS
         List<Curso> listadoCursos = new ArrayList<>();
