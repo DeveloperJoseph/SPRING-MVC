@@ -11,10 +11,18 @@
             <title>Welcome to Spring Web MVC project</title>
         <%--NUESTRO SCRIPT jQuery QYE NOS PERMITE FILTRAR EN NUESRTO TBODY--%>
         <script>
+            //Carga completa de nuestro documento HTML
             $(document).ready(function () {
+                //capturamos id de nuestra etiqueta <input> y iniciamos un funcion
                 $("#myInput").on("keyup", function () {
+                    //capturamos el valor del <input> y convertimos a minusculas
                     var valorInput = $(this).val().toLowerCase();
+                    //capturamos id de nuestra etiqueta <tbody> y iniciamos un funcion filter
                     $("#myTableBody tr").filter(function () {
+                        //obtenemos valor (this) y iniciamos un metodo .toggle()
+                        //capturamos valores de nuestro <tbody> y el texto lo convertimos
+                        //a minusculas y lo indexamos(buscar) con nuestro valor obtenido
+                        //anteriormente de nuestro <input> = valorInput y sea mayor -1
                         $(this).toggle($(this).text().toLowerCase().indexOf(valorInput) > -1);
                     });
                 });

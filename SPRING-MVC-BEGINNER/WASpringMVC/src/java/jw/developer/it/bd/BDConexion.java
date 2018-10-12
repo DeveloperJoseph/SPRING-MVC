@@ -21,7 +21,7 @@ public class BDConexion {
     private String user = "sa";
     private String password = "whoami";
 
-    Connection cnn = null;// onexion con un valor nulo
+    Connection cnn = null;// conexion con un valor nulo
 
     //metodo Connection para establecer conexion con nuestro database 
     public Connection establecerConexion() {
