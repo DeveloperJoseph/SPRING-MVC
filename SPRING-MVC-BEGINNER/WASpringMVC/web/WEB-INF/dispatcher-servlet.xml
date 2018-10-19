@@ -1,5 +1,46 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<!-- was: <?xml version="1.0" encoding="UTF-8"?> -->
+<!-- was: <?xml version="1.0" encoding="UTF-8"?>
+
+¡DOCUMENTO IMPORTANTE PARA EL CORRECTO FUNCIONAMIENTO DE SPRING MVC!
+
+*| En este documento XML estamos añadiendo las siguientes etiquetas:
+    
+    NRO° 1.- Agregamos nuestra etiquetas  xmlns:mvc y xmlns:context con  sus 
+    respectivos enlaces a los servidores de springframwork.org, este es la
+    principal etiquetas a agregar.
+    
+       xmlns:mvc="http://www.springframework.org/schema/mvc"  - LINEA 18
+       xmlns:context="http://www.springframework.org/schema/context" - LINEA 19
+
+   NRO° 2.- En esta segunda parte de la configuracion  xsi:schemaLocation al siguiente documento XML
+   es agregar nuestro enlaces para establecer conexion con las  url de los servidores de Spring
+   
+   
+       http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd - LINEA 30
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd - LINEA 31
+       
+   NRO° 3.- Ya agregadas las etiquetas anteriormente tendremos a las siguientes etiquetas <context>, <mvc>
+   , en esta parte 3 de la configutacion agregarmos nuestra etiqueta context:component-scan la cual nos
+   permite establecer un base-package con nuestro controladores de spring ,
+   despues agregamos un mvc:annotation-driven la cual nos permte tener un control mejor de spring framework
+   , y por ultimo nuestra mvc:resources  que mapea nuestra carpeta recursos que contiene mi Bootstrap 
+   este ultimo proceso es muy importante para enlazar carpetas de nuestro proyecto.
+   
+    <context:component-scan base-package="jw.developer.it.controller"></context:component-scan> - LINEA 34
+    <mvc:annotation-driven></mvc:annotation-driven> - LINEA 35
+    <mvc:resources mapping="/Recursos/**" location="/Recursos/"></mvc:resources> - LINEA 36
+    
+    NROª 4.-
+    Por ultimo en estos pasos sencillos , en nuestra etiqueta <bean> , este nos permite
+    establecer con la carpeta /WEB-INF/jsp/  , para la vista de nuestro .jsp 
+    
+    LINEA 50 -  53
+     <bean id="viewResolver"
+          class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+          p:prefix="/WEB-INF/jsp/"
+          p:suffix=".jsp" />
+     
+-->
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:p="http://www.springframework.org/schema/p"
@@ -16,10 +57,10 @@
        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 
-
     <context:component-scan base-package="jw.developer.it.controller"></context:component-scan>
     <mvc:annotation-driven></mvc:annotation-driven>
-
+    <mvc:resources mapping="/Recursos/**" location="/Recursos/"></mvc:resources>
+    
     <bean id="viewResolver"
           class="org.springframework.web.servlet.view.InternalResourceViewResolver"
           p:prefix="/WEB-INF/jsp/"

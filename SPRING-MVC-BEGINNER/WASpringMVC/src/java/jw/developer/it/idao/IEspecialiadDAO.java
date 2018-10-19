@@ -9,6 +9,9 @@ import jw.developer.it.model.Especialidad;
  */
 public interface IEspecialiadDAO {
 
-    //interfaz de listado objeto especialidad
+    //interfaz de listado objeto especialidad + add + update + delete
     public List<Especialidad> ListadoEspecialidades();
+    public Boolean AddEspecialidad(Especialidad objEspecialidad);
+    public Boolean UpdateEspecialidad(Especialidad objEspecialidad);
+    public Boolean DeleteEspecialidad(String Idesp);
 }

@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class DefaultController {
 
     //Mapeo de solicitud + el metodo GET
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "/index", method = RequestMethod.GET)
     public String index(Model model) {//metodo cadena denominado "index" + object modelo + retorna un cadena "index"
         CursoDAO objCursoDAO = new CursoDAO();
         List<Curso> ListadoCursos = objCursoDAO.listaCursos();
@@ -47,7 +47,7 @@ public class DefaultController {
     }
 
     //Mapeo de solicitud + el metodo GET
-    @RequestMapping(value = "/home", method = RequestMethod.GET)
+    @RequestMapping(value = "/", method = RequestMethod.GET)
     public String home() {//metodo cadena denominado "home" y retorna un cadena "home"
         return "home";
     }

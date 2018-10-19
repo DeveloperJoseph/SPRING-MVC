@@ -48,4 +48,19 @@ public class EspecialidadDAO implements IEspecialiadDAO {
         return ListaEspecialidad;
     }
 
+    @Override
+    public Boolean AddEspecialidad(Especialidad objEspecialidad) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Boolean UpdateEspecialidad(Especialidad objEspecialidad) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Boolean DeleteEspecialidad(String Idesp) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

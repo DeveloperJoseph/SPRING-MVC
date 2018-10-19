@@ -3,16 +3,25 @@
     Created on : 29-sep-2018, 2:13:57
     Author     : JOSEPH
 --%>
-
+<%--INCLUIMOS NUESTRAS ETIQUETAs taglib PRFIX = SPRING Y VALUE(URL)
+ESTE NOS PERMITE INCLUIR ETIQUETAS NATIVAS DE SPRING FRAMEWORK--%>
+<%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <%--INCLUIMOS NUESTROS ENLACES BOOTSTRAP 4--%>
-        <jsp:include page="link.jsp"></jsp:include>
-            <title>Welcome to Spring Web MVC project</title>
-        </head>
+        <%--INCLUIMOS NUESTRAS ETIQUETAS SPRING:URL CON SU VAR(NOMBRE VARIABLE) Y VALUE(URL)--%>
+        <spring:url var="BootStrapJS" value="/Recursos/Scripts/Bootstrap/bootstrap.js"></spring:url>
+        <spring:url var="BootStrapCSS" value="/Recursos/Content/Bootstrap/bootstrap.css"></spring:url>
+        <spring:url var="JQueryJS"  value="/Recursos/Scripts/Jquery/jquery-1.12.4.js"></spring:url>
+        <%--INCLUIMOS NUESTRAS ETIQUETAS SPRING:URL EN UN HREF A NUESTRO CARPETA RECURSOS--%>
+        <link href="${BootStrapCSS}" rel="stylesheet" type="text/css"/>
+        <script src="${BootStrapJS}" type="text/javascript"></script>
+        <script src="${JqueryJs}" type="text/javascript"></script>
+        
+        <title>Welcome to Spring Web MVC project - HOME</title>
+    </head>
     <%--CABECERA DE NUESTRO CUERPO HTML--%>
     <body class="text-white bg-dark text-center">
         <div class="jumbotron text-white bg-success">

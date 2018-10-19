@@ -10,6 +10,10 @@ import jw.developer.it.model.Curso;
  */
 public interface ICursoDAO {
 
-    //metodo publico para listar cursos
+    //metodo publico para listar cursos + add + update + delete
     public List<Curso> listaCursos();
+    public Boolean AddCurso(Curso objCurso);
+    public Boolean UpdateCurso(Curso objCurso);
+    public Boolean DeleteCurso(String IdCurso);
+    
 }

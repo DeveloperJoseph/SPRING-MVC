@@ -66,4 +66,19 @@ public class AlumnoDAO implements IAlumnoDAO {
         return listaDeAlumnos;
     }
 
+    @Override
+    public Boolean AddAlumno(Alumno objAlumno) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Boolean UpdateAlumno(Alumno objAlumno) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Boolean DeleteAlumno(String IdAlumno) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

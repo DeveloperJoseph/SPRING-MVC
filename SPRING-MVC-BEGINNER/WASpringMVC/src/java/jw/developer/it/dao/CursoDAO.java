@@ -47,4 +47,19 @@ public class CursoDAO implements ICursoDAO {
         return listadoCursos;//retornando listado
     }
 
+    @Override
+    public Boolean AddCurso(Curso objCurso) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Boolean UpdateCurso(Curso objCurso) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Boolean DeleteCurso(String IdCurso) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }
