@@ -49,8 +49,9 @@ public class AlumnoDAO implements IAlumnoDAO {
                 a.setIdAlumno(rs.getString(1));
                 a.setApeAlumno(rs.getString(2));
                 a.setNomAlumno(rs.getString(3));
-                a.setIdesp(rs.getString(4));
-                a.setPROCE(rs.getString(5));
+                a.setNomesp(rs.getString(4));
+                a.setIdesp(rs.getString(5));
+                a.setPROCE(rs.getString(6));
                 listaDeAlumnos.add(a);
             }
 

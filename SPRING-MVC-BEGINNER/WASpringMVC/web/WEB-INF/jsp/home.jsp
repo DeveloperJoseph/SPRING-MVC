@@ -19,11 +19,22 @@ ESTE NOS PERMITE INCLUIR ETIQUETAS NATIVAS DE SPRING FRAMEWORK--%>
         <link href="${BootStrapCSS}" rel="stylesheet" type="text/css"/>
         <script src="${BootStrapJS}" type="text/javascript"></script>
         <script src="${JqueryJs}" type="text/javascript"></script>
-        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.4.0/jquery-migrate.js" type="text/javascript"></script>  
+
         <title>Welcome to Spring Web MVC project - HOME</title>
     </head>
     <%--CABECERA DE NUESTRO CUERPO HTML--%>
     <body class="text-white bg-dark text-center">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">THE SOFTMAN</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" 
+                    data-target="#navbarNav" aria-controls="navbarNav"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            </div>
+        </nav>
         <div class="jumbotron text-white bg-success">
             <h1>HELLO WORLD SPRING MVC - HOME</h1>
         </div>

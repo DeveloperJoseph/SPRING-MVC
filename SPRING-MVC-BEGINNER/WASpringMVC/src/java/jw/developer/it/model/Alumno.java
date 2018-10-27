@@ -10,15 +10,27 @@ public class Alumno {
     private String IdAlumno;
     private String ApeAlumno;
     private String NomAlumno;
+    private String Nomesp;
     private String Idesp;
     private String PROCE;
 
-    //declaramos un constructor vacio para nuestro objeto Alumno
     public Alumno() {
-
     }
 
+    //declaramos un constructor vacio para nuestro objeto Alumno
+
+    public Alumno(String IdAlumno, String ApeAlumno, String NomAlumno, String Nomesp, String Idesp, String PROCE) {
+        this.IdAlumno = IdAlumno;
+        this.ApeAlumno = ApeAlumno;
+        this.NomAlumno = NomAlumno;
+        this.Nomesp = Nomesp;
+        this.Idesp = Idesp;
+        this.PROCE = PROCE;
+    }
+   
+
     //GETTERS AND SETTERS PARA NUESTRO OBJETO ALUMNO
+
     public String getIdAlumno() {
         return IdAlumno;
     }
@@ -43,6 +55,14 @@ public class Alumno {
         this.NomAlumno = NomAlumno;
     }
 
+    public String getNomesp() {
+        return Nomesp;
+    }
+
+    public void setNomesp(String Nomesp) {
+        this.Nomesp = Nomesp;
+    }
+
     public String getIdesp() {
         return Idesp;
     }
@@ -58,5 +78,5 @@ public class Alumno {
     public void setPROCE(String PROCE) {
         this.PROCE = PROCE;
     }
-
+    
 }
